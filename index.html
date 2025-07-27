@@ -1,0 +1,27 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scaled=1.0"/>
+  <title>Mi PWA</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" hred="icons/icon-192.png" type="image/png"/>
+</head>
+<body>
+  <h1>Hola, PWA</h1>
+  <p>Esta es mi primera app progresiva</p>
+  <button id="clickButton">Haz click</button>
+  <p id="ClickResult"></p>
+
+  <script src="app.js"></script>
+  <script>
+     if('serviceWorker' in navigator) {
+	navigator.serviceWorker.register('sw.js').then(() => {
+          console.log('Service Worker registrado');
+	});   
+	}
+  </script>
+</body>
+</html>
